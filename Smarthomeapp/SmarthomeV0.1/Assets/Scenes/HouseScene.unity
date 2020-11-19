@@ -486,7 +486,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &698870956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1749,7 +1749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sun: {fileID: 718033587}
-  secondsInFullDay: 120
+  secondsInFullDay: 30
   currentTimeOfDay: 0
 --- !u!4 &1458475754
 Transform:
@@ -1775,7 +1775,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1582667526}
   - component: {fileID: 1582667528}
-  - component: {fileID: 1582667527}
   m_Layer: 9
   m_Name: Lightcamera
   m_TagString: Untagged
@@ -1797,14 +1796,6 @@ Transform:
   m_Father: {fileID: 1901715166}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!81 &1582667527
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1582667525}
-  m_Enabled: 1
 --- !u!20 &1582667528
 Camera:
   m_ObjectHideFlags: 0
