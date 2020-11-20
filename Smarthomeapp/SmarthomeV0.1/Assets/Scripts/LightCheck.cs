@@ -5,7 +5,7 @@ using UnityEngine;
 public class LightCheck : MonoBehaviour
 {
     public RenderTexture LightCheckTexture;
-    public float LightLevel;
+    public static float LightLevel;
     public int Light;
     // Update is called once per frame
     void Update()
