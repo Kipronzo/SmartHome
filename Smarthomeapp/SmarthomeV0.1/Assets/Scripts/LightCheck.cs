@@ -25,11 +25,13 @@ public class LightCheck : MonoBehaviour
         Color32[] colors = temp2dTexture.GetPixels32();
 
         LightLevel = 0;
-        for(int i = 0; i < colors.Length; i++)
+        for (int i = 0; i < colors.Length; i++)
         {
             LightLevel += (0.2126f * colors[i].r) + (0.7152f * colors[i].g) + (0.0722f + colors[i].b);
         }
+
+        RenderTexture.ReleaseTemporary(tmpTexture);
         Destroy(temp2dTexture);
-        //Debug.Log(LightLevel);
+        ////Debug.Log(LightLevel);
     }
 }
