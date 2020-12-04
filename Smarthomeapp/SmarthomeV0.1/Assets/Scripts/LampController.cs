@@ -7,8 +7,8 @@ public class LampController : MonoBehaviour
     public float CurrentIntensity;
     public float SensorData;
     [SerializeField] private Light myLight;
-    public static int scroll = 8;
-    public float desired = scroll / 10;
+    public static int scroll = 10;
+    public float desired = 36 / scroll;
 
     public float eint;
     public float eprev;
@@ -35,7 +35,7 @@ public class LampController : MonoBehaviour
 
     private void LateUpdate()
     {
-        SensorData = LightCheck.LightLevel;
+        SensorData = LightCheck.AvarageLightLevel;
         float dt = Time.deltaTime;
         sensor = SensorData / 100000;
         float e = desired - sensor;
