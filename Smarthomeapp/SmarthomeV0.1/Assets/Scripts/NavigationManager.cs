@@ -14,6 +14,9 @@ public class NavigationManager : MonoBehaviour
     public GameObject roomsPanel;
     public Text roomText;
 
+    public TMPro.TMP_InputField LuminosityInput;
+    public LampController Lamp;
+
     void Start()
     {
         mainCamera.SetActive(true);
@@ -36,6 +39,8 @@ public class NavigationManager : MonoBehaviour
         parametersPanel.SetActive(true);
         roomsPanel.SetActive(false);
         roomText.text = "LIVING ROOM";
+
+        LuminosityInput.text = Lamp.desired.ToString();
     }
 
     public void OnKitchenButtonClick()
@@ -84,6 +89,18 @@ public class NavigationManager : MonoBehaviour
         parametersPanel.SetActive(false);
         roomsPanel.SetActive(true);
         roomText.text = "";
+    }
+
+    public void SetDesiredLuminosity()
+    {
+        if (float.TryParse(LuminosityInput.text, out float result))
+        {
+            Lamp.desired = result;
+        }
+        else
+        {
+            LuminosityInput.text = Lamp.desired.ToString();
+        }
     }
 
 }

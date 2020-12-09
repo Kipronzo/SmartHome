@@ -222,6 +222,18 @@ Transform:
   m_Father: {fileID: 2120693870}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &84318872 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9067711322255084152, guid: 11b0d78440243f340a2470529185dcc9,
+    type: 3}
+  m_PrefabInstance: {fileID: 781069239}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &129053297
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,7 +571,8 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.0000002
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 500873787832437515, guid: 04667ff1dc43762438baf7d3bc208264, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 04667ff1dc43762438baf7d3bc208264, type: 3}
 --- !u!1 &214187638 stripped
 GameObject:
@@ -587,6 +600,8 @@ MonoBehaviour:
   parametersPanel: {fileID: 781069241}
   roomsPanel: {fileID: 781069242}
   roomText: {fileID: 781069240}
+  LuminosityInput: {fileID: 84318872}
+  Lamp: {fileID: 409505717}
 --- !u!1 &318937419
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,9 +995,9 @@ MonoBehaviour:
   desired: 4
   eint: 0
   eprev: 0
-  kp: 1.5
-  ki: 100
-  kd: -0.01
+  kp: 2
+  ki: 25
+  kd: -0.02
   sensor: 0
 --- !u!108 &409505718
 Light:
@@ -2838,6 +2853,36 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 9067711322118881623, guid: 11b0d78440243f340a2470529185dcc9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067711322118881623, guid: 11b0d78440243f340a2470529185dcc9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067711322118881623, guid: 11b0d78440243f340a2470529185dcc9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067711322118881623, guid: 11b0d78440243f340a2470529185dcc9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 214187639}
+    - target: {fileID: 9067711322118881623, guid: 11b0d78440243f340a2470529185dcc9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetDesiredLuminosity
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067711322118881623, guid: 11b0d78440243f340a2470529185dcc9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 9067711322229562929, guid: 11b0d78440243f340a2470529185dcc9,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -3258,6 +3303,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.39999962
       objectReference: {fileID: 0}
+    - target: {fileID: 9067711322862840170, guid: 11b0d78440243f340a2470529185dcc9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9067711322862840171, guid: 11b0d78440243f340a2470529185dcc9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -3282,6 +3332,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_HorizontalAlignment
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067711322862840173, guid: 11b0d78440243f340a2470529185dcc9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9067711322896004228, guid: 11b0d78440243f340a2470529185dcc9,
         type: 3}

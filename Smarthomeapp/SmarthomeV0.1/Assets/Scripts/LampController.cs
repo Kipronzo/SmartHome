@@ -40,8 +40,8 @@ public class LampController : MonoBehaviour
         sensor = SensorData / 100000;
         float e = desired - sensor;
         float edot = (e - eprev) / dt;
-        eint = eint + e * dt;
-        float u = kp * e + ki * eint + kd * edot;
+        eint += e * dt;
+        float u = (kp * e) + (ki * eint) + (kd * edot);
         if (u < 0f)
             u = 0f;
         eprev = e;
