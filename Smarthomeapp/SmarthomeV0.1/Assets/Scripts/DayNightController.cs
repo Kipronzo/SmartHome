@@ -12,6 +12,8 @@ public class DayNightController : MonoBehaviour
     private float timeMultiplier = 1f;
     private float sunInitialIntensity;
 
+    public float MaxTempDelta = 5f;
+
     void Start()
     {
         sunInitialIntensity = sun.intensity;
@@ -43,5 +45,15 @@ public class DayNightController : MonoBehaviour
             intensityMultiplier = Mathf.Clamp01(1 - ((currentTimeOfDay - 0.73f) * (1 / 0.02f)));
         }
         sun.intensity = sunInitialIntensity * intensityMultiplier;
+    }
+
+    public float GetTemperature()
+    {
+        var mult = currentTimeOfDay + 0.5f;
+        if (mult > 1f)
+        {
+            mult = 1f - (mult - 1f);
+        }
+        return 16f + (MaxTempDelta * mult);
     }
 }

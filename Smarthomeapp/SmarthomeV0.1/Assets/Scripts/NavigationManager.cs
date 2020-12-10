@@ -17,6 +17,9 @@ public class NavigationManager : MonoBehaviour
     public TMPro.TMP_InputField LuminosityInput;
     public LampController Lamp;
 
+    public TMPro.TMP_InputField TemperatureInput;
+    public Heater HeaterObject;
+
     void Start()
     {
         mainCamera.SetActive(true);
@@ -41,6 +44,7 @@ public class NavigationManager : MonoBehaviour
         roomText.text = "LIVING ROOM";
 
         LuminosityInput.text = Lamp.desired.ToString();
+        TemperatureInput.text = HeaterObject.DesiredTemperature.ToString();
     }
 
     public void OnKitchenButtonClick()
@@ -100,6 +104,18 @@ public class NavigationManager : MonoBehaviour
         else
         {
             LuminosityInput.text = Lamp.desired.ToString();
+        }
+    }
+
+    public void SetDesiredTemperature()
+    {
+        if (float.TryParse(TemperatureInput.text, out float result))
+        {
+            HeaterObject.DesiredTemperature = result;
+        }
+        else
+        {
+            TemperatureInput.text = HeaterObject.DesiredTemperature.ToString();
         }
     }
 
