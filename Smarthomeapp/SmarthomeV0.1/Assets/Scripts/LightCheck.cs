@@ -26,7 +26,10 @@ public class LightCheck : MonoBehaviour
     public static float LightLevel8;
     public static float LightLevel9;
     public int Light;
-    // Update is called once per frame
+
+    /// <summary>
+    /// Gets the light intensity based on the light sensors
+    /// </summary>
     void Update()
     {
         RenderTexture tmpTexture = RenderTexture.GetTemporary(LightCheckTexture.width, LightCheckTexture.height, 0, RenderTextureFormat.Default, RenderTextureReadWrite.Linear);

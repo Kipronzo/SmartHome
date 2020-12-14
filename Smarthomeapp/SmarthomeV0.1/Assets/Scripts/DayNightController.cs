@@ -28,6 +28,10 @@ public class DayNightController : MonoBehaviour
             currentTimeOfDay = 0;
         }
     }
+
+    /// <summary>
+    /// Updates the Sun's position based on the time
+    /// </summary>
     void UpdateSun()
     {
         sun.transform.localRotation = Quaternion.Euler((currentTimeOfDay * 360f) - 90, 170, 0);
@@ -47,6 +51,10 @@ public class DayNightController : MonoBehaviour
         sun.intensity = sunInitialIntensity * intensityMultiplier;
     }
 
+    /// <summary>
+    /// Returns the outside temperature based on the time of day
+    /// </summary>
+    /// <returns>Current temperature</returns>
     public float GetTemperature()
     {
         var mult = currentTimeOfDay + 0.5f;

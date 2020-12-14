@@ -33,6 +33,9 @@ public class LampController : MonoBehaviour
         Awake();
     }
 
+    /// <summary>
+    /// Updates the light's intensity to help reach the desired intensity.
+    /// </summary>
     private void LateUpdate()
     {
         SensorData = LightCheck.AvarageLightLevel;
@@ -49,25 +52,4 @@ public class LampController : MonoBehaviour
         CurrentIntensity = u;
     }
 
-    //void Update()
-    //{
-    //    if (LightCheck.LightLevel > 450000 || (DayNightController.currentTimeOfDay > 0.3))
-    //    {
-    //        myLight.intensity = 0;
-    //    }
-    //    if (LightCheck.LightLevel > 450000 || (DayNightController.currentTimeOfDay < 0.7))
-    //    {
-    //        myLight.intensity = 0;
-    //    }
-    //    if (LightCheck.LightLevel <= 450000 && (DayNightController.currentTimeOfDay < 0.3))
-    //    {
-    //    CurrentIntensity = LightCheck.LightLevel / 1000000;
-    //    myLight.intensity = 2 - (1 + CurrentIntensity) + desired;
-    //    }
-    //    if (LightCheck.LightLevel <= 450000 && (DayNightController.currentTimeOfDay > 0.7))
-    //    {
-    //        CurrentIntensity = LightCheck.LightLevel / 1000000;
-    //        myLight.intensity = 2 - (1 + CurrentIntensity) + desired;
-    //    }
-    //}
 }

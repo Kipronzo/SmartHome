@@ -35,7 +35,9 @@ public class Heater : MonoBehaviour
         Awake();
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Updates the heaters intensity to help reach the desired temperature
+    /// </summary>
     void LateUpdate()
     {
         //return;
@@ -54,6 +56,11 @@ public class Heater : MonoBehaviour
         //CurrentIntensity = u;
     }
 
+    /// <summary>
+    /// Returns the temperature that the heater emits at that given point
+    /// </summary>
+    /// <param name="gameObject"></param>
+    /// <returns>The temperature at gameObject's position</returns>
     public float GetTemperature(GameObject gameObject)
     {
         var distance = Vector3.Distance(transform.position, gameObject.transform.position);

@@ -9,7 +9,10 @@ public class HeatSensor : MonoBehaviour
     public Heater[] Heaters;
 
    
-
+    /// <summary>
+    /// Return the temperature of the sensor
+    /// </summary>
+    /// <returns>Temperatur of the sensor</returns>
     public float GetTemperature()
     {
         float baseTemp = DayNight.GetTemperature();
